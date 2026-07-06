@@ -1,0 +1,23 @@
+[project]
+name = "redteam-core"
+version = "0.1.0"
+description = "Shared core for the AI red-teaming asset (target adapters, config loading, reporting)."
+requires-python = ">=3.10"
+dependencies = [
+    "pyyaml",
+    "requests",
+    "python-dotenv",
+]
+
+[project.optional-dependencies]
+# Setup 2 (Python) and Setup 3 (Sophisticated) tooling.
+python-setup = ["deepteam", "giskard", "deepeval", "datasets"]
+sophisticated = ["pyrit", "deepeval"]
+scanner = ["garak"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["redteam_core*"]

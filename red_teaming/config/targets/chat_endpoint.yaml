@@ -1,0 +1,22 @@
+# The app under test — defined ONCE here, consumed by every setup.
+# Secrets come from .env via ${VAR} (see .env.example). Never hardcode keys.
+#
+# This example assumes an OpenAI-style chat endpoint. Adjust request_template and
+# response_path to match your actual app's request/response shape.
+
+name: chat_endpoint
+url: ${TARGET_CHAT_URL}
+method: POST
+
+headers:
+  Content-Type: application/json
+  Authorization: Bearer ${TARGET_CHAT_API_KEY}
+
+# {{prompt}} is replaced with the (JSON-escaped) attack prompt at send time.
+request_template: |
+  {"messages": [{"role": "user", "content": "{{prompt}}"}]}
+
+# Path into the JSON response to extract the model's reply text.
+response_path: choices[0].message.content
+
+timeout: 60

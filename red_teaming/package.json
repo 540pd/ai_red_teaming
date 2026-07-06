@@ -1,0 +1,13 @@
+{
+  "name": "ai-redteam-asset",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Node dependency for Setup 1 (Easy) — promptfoo. Isolated to setups/1_easy.",
+  "scripts": {
+    "redteam": "promptfoo redteam run -c setups/1_easy/promptfooconfig.yaml",
+    "report": "promptfoo redteam report"
+  },
+  "devDependencies": {
+    "promptfoo": "^0.100.0"
+  }
+}

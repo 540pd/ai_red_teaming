@@ -1,0 +1,22 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# Tool outputs
+reports/*/
+!reports/.gitkeep
+.promptfoo/
+garak_runs/
+*.report.jsonl
+
+# OS
+.DS_Store

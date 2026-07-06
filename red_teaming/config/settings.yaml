@@ -1,0 +1,10 @@
+# Global defaults shared across setups.
+
+# Default target if a runner is invoked without one.
+default_target: chat_endpoint
+
+# Provider used by tools needing an attacker/judge LLM (graders, judges).
+# Actual keys live in .env.
+judge:
+  provider: openai        # openai | anthropic
+  model: gpt-4o-mini

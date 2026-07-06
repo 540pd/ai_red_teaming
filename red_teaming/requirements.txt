@@ -1,0 +1,17 @@
+# Shared core
+pyyaml
+requests
+python-dotenv
+
+# Setup 1 (Easy) — Python side. Promptfoo is installed via npm (see package.json).
+garak
+
+# Setup 2 (Python) — uncomment when you build it out
+# deepteam
+# giskard
+# deepeval
+# datasets
+
+# Setup 3 (Sophisticated) — uncomment when you build it out
+# pyrit
+# deepeval
